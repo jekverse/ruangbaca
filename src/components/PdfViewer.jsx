@@ -9,26 +9,12 @@ pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 export default function PdfViewer({ pdfPath }) {
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
   const [scale, setScale] = useState(1.0);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
-    setPageNumber(1);
   }
 
-  function changePage(offset) {
-    setPageNumber(prevPageNumber => prevPageNumber + offset);
-  }
-
-  function previousPage() {
-    changePage(-1);
-  }
-
-  function nextPage() {
-    changePage(1);
-  }
-  
   function zoomIn() {
     setScale(prev => Math.min(prev + 0.2, 3.0));
   }
@@ -40,34 +26,7 @@ export default function PdfViewer({ pdfPath }) {
   return (
     <div className="flex flex-col items-center p-4 min-h-full">
       <div className="bg-white shadow-lg rounded-xl p-3 mb-6 sticky top-4 z-20 flex items-center space-x-4 border border-gray-200">
-        <div className="flex space-x-2 border-r border-gray-200 pr-4">
-          <button
-            type="button"
-            disabled={pageNumber <= 1}
-            onClick={previousPage}
-            className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:hover:bg-transparent text-gray-700 transition-colors"
-            title="Previous Page"
-          >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <span className="flex items-center text-sm font-medium text-gray-700 px-2">
-            {pageNumber || (numPages ? 1 : '--')} / {numPages || '--'}
-          </span>
-          <button
-            type="button"
-            disabled={pageNumber >= numPages}
-            onClick={nextPage}
-            className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:hover:bg-transparent text-gray-700 transition-colors"
-            title="Next Page"
-          >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-        <div className="flex space-x-2 pl-2">
+        <div className="flex space-x-2 pl-2 pr-2">
           <button
             type="button"
             onClick={zoomOut}
@@ -94,10 +53,11 @@ export default function PdfViewer({ pdfPath }) {
         </div>
       </div>
 
-      <div className="flex-1 w-full max-w-5xl flex justify-center shadow-xl border border-gray-200 bg-white">
+      <div className="flex-1 w-full max-w-5xl flex flex-col items-center">
         <Document
           file={pdfPath}
           onLoadSuccess={onDocumentLoadSuccess}
+          className="flex flex-col gap-6"
           loading={
             <div className="flex items-center justify-center p-20 text-indigo-600">
               <svg className="animate-spin h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -107,18 +67,22 @@ export default function PdfViewer({ pdfPath }) {
             </div>
           }
           error={
-            <div className="p-10 text-red-500 bg-red-50 rounded-lg m-4 border border-red-200">
+            <div className="p-10 text-red-500 bg-red-50 rounded-lg m-4 border border-red-200 shadow-sm">
               Failed to load PDF file. Please ensure the file exists at the specified path.
             </div>
           }
         >
-          <Page 
-            pageNumber={pageNumber} 
-            scale={scale} 
-            renderTextLayer={true}
-            renderAnnotationLayer={true}
-            className="pdf-page-container"
-          />
+          {Array.from(new Array(numPages || 0), (el, index) => (
+            <div key={`page_${index + 1}`} className="shadow-xl border border-gray-200 bg-white">
+              <Page 
+                pageNumber={index + 1} 
+                scale={scale} 
+                renderTextLayer={true}
+                renderAnnotationLayer={true}
+                className="pdf-page-container"
+              />
+            </div>
+          ))}
         </Document>
       </div>
     </div>
