@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="ruangbaca - Minimalist Static PDF Library" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- TODO(security): unsafe-inline is temporarily used for script-src because Astro Islands (client:only) injects inline scripts for hydration. This requires security review or implementation of a strict CSP nonce/hash mechanism. -->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:;" />
+		
+		<!-- Anti-clickjacking -->
+		<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+
+		<title>{title} | ruangbaca</title>
+	</head>
+	<body class="bg-gray-50 text-gray-900 font-sans antialiased min-h-screen flex">
+		<slot />
+	</body>
+</html>
