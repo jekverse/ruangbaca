@@ -2,12 +2,16 @@
   {
     "id": "psychology-of-money",
     "title": "The Psychology of Money (Morgan Housel)",
+    "genre": "Finance",
+    "year": 2020,
     "coverPath": "/covers/psychology-of-money.png",
     "pdfPath": "/pdfs/121. The Psychology of Money (Morgan Housel).pdf"
   },
   {
     "id": "dark-psychology",
     "title": "Dark Psychology (James Williams)",
+    "genre": "Psychology",
+    "year": 2019,
     "coverPath": "/covers/dark-psychology.png",
     "pdfPath": "/pdfs/179.  Dark Psychology - James Williams.pdf"
   }

@@ -8,17 +8,19 @@ pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 export default function PdfCover({ pdfPath }) {
   return (
-    <div className="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105 pointer-events-none">
+    <div className="absolute inset-0 w-full h-full flex items-center justify-center p-2 pointer-events-none">
       <Document 
         file={pdfPath} 
-        loading={<div className="text-gray-400 text-sm">Loading cover...</div>}
+        loading={<div className="text-gray-400 text-xs text-center">Loading cover...</div>}
         error={<div className="text-red-400 text-xs text-center px-2">Cover unavailable</div>}
+        className="w-full h-full flex items-center justify-center"
       >
         <Page 
           pageNumber={1} 
           renderTextLayer={false} 
           renderAnnotationLayer={false}
-          width={300}
+          className="shadow-sm border border-gray-200"
+          height={200}
         />
       </Document>
     </div>
