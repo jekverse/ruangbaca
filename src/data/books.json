@@ -14,5 +14,45 @@
     "year": 2019,
     "coverPath": "/covers/dark-psychology.png",
     "pdfPath": "/pdfs/179.  Dark Psychology - James Williams.pdf"
+  },
+  {
+    "id": "dopamine-detox",
+    "title": "Dopamine Detox A Short Guide to Eliminate Distractions",
+    "genre": "Self-Help",
+    "year": 2021,
+    "coverPath": "/covers/dopamine-detox.png",
+    "pdfPath": "/pdfs/1764. Dopamine Detox A Short Guide to Eliminate Distractions & Train Your Brain to Do Hard Things b.indonesia.pdf"
+  },
+  {
+    "id": "berani-tidak-disukai",
+    "title": "Berani Tidak Disukai (Ichiro Kishimi, Fumitake Koga)",
+    "genre": "Philosophy",
+    "year": 2013,
+    "coverPath": "/covers/berani-tidak-disukai.png",
+    "pdfPath": "/pdfs/219.  Berani Tidak Disukai - Ichiro Kishimi dan Fumitake Koga.pdf"
+  },
+  {
+    "id": "obat-malas-dosis-tinggi",
+    "title": "Obat Malas Dosis Tinggi",
+    "genre": "Self-Help",
+    "year": 2020,
+    "coverPath": "/covers/obat-malas-dosis-tinggi.png",
+    "pdfPath": "/pdfs/394. Obat Malas Dosis Tinggi for Worker and Employee Edition .pdf"
+  },
+  {
+    "id": "master-book-personal-branding",
+    "title": "The Master Book of Personal Branding",
+    "genre": "Business",
+    "year": 2019,
+    "coverPath": "/covers/personal-branding.png",
+    "pdfPath": "/pdfs/763. The Master Book of Personal Branding - Farco Siswiyanto Raharjo.pdf"
+  },
+  {
+    "id": "super-memory",
+    "title": "Super Memory",
+    "genre": "Science",
+    "year": 2018,
+    "coverPath": "/covers/super-memory.png",
+    "pdfPath": "/pdfs/848. Super Memory  Kini Anda pun Bisa Memilikinya.pdf"
   }
 ]
