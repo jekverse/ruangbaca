@@ -54,5 +54,61 @@
     "year": 2018,
     "coverPath": "/covers/super-memory.png",
     "pdfPath": "/pdfs/848. Super Memory  Kini Anda pun Bisa Memilikinya.pdf"
+  },
+  {
+    "id": "belajar-meningkatkan-kualitas-diri",
+    "title": "Belajar Meningkatkan Kualitas Diri (Alvi Syahrin)",
+    "genre": "Self-Help",
+    "year": 2022,
+    "pdfPath": "/pdfs/1236. Belajar Meningkatkan Kualitas Diri - Alvi Syahrin.pdf"
+  },
+  {
+    "id": "seni-manajemen-waktu",
+    "title": "Seni Manajemen Waktu (Cecilia Pretty)",
+    "genre": "Self-Help",
+    "year": 2020,
+    "pdfPath": "/pdfs/1963.  Cecilia Pretty - Seni Manajemen Waktu (BM).pdf"
+  },
+  {
+    "id": "principles-of-power",
+    "title": "The Principles Of Power (Dion Yulianto)",
+    "genre": "Self-Help",
+    "year": 2018,
+    "pdfPath": "/pdfs/3301. The Principles Of Power (Dion Yulianto).pdf"
+  },
+  {
+    "id": "atomic-habits",
+    "title": "Atomic Habits (James Clear)",
+    "genre": "Self-Help",
+    "year": 2018,
+    "pdfPath": "/pdfs/Atomic Habits_ An Easy & Proven Way to BuiGood Habits & Break Bad Ones - James Clear.pdf"
+  },
+  {
+    "id": "crypto-investing-principles",
+    "title": "Crypto Investing Principles",
+    "genre": "Finance",
+    "year": 2021,
+    "pdfPath": "/pdfs/Crypto Investing Principles.pdf"
+  },
+  {
+    "id": "crypto-trading-guide",
+    "title": "Crypto Trading Guide",
+    "genre": "Finance",
+    "year": 2022,
+    "pdfPath": "/pdfs/Crypto Trading Guide.pdf"
+  },
+  {
+    "id": "electronic-for-inventors",
+    "title": "Electronic For Inventors",
+    "genre": "Technology",
+    "year": 2016,
+    "pdfPath": "/pdfs/Electronic For Inventors.pdf"
+  },
+  {
+    "id": "real-crypto-trader",
+    "title": "The Real Crypto Trader",
+    "genre": "Finance",
+    "year": 2020,
+    "pdfPath": "/pdfs/The_Real_Crypto_Trader.pdf"
   }
 ]
